@@ -4,10 +4,13 @@
 
 
 ## Contexto
-# XXX
+# SuperCarteira é uma plataforma de análise de investimentos que classifica produtos financeiros em categorias de acordo com o perfil de 
+# risco e retorno. Usa-la para escolher investimentos para compor uma carteira de investimentos facilita a escolha de produtos financeiros
+# dado que a partir dela basta comparar alguns parâmetros sobre os ativos disponíveis na maisretorno.com.
 
 ## Propósito deste código
-# XXX
+# Puxar informações de produtos financeiros que foram classificados pela SuperCarteira para criar um gráfico que ajude a escolher quais
+# investimentos são mais atrativos para compor a carteira de investimentos.
 
 ## Sumário
 # 01. Introdução
@@ -225,6 +228,64 @@ def string_to_int(
     return [int(item) for item in string_list]
 
 
+# Função que prepara os dados para criar os gráficos
+def clean_to_chart(
+    df_result: pd.DataFrame,
+    SCORE_TYPE: str = "60m"
+):
+    """
+    Função que prepara os dados para criar os gráficos
+
+    Args:
+        df_result (pd.DataFrame): DataFrame com dados limpos para criar gráficos
+
+    Returns:
+        df_result_chart: DataFrame com dados limpos para criar gráficos
+    """
+    # Convert "categoria" column to categorical data type
+    df_result["categoria"] = pd.Categorical(df_result["categoria"])
+
+    # Config Gráfico
+    PROFITABILITY = f"profitability_{SCORE_TYPE}"
+    VOLATILITY = f"volatility_{SCORE_TYPE}"
+
+    # Filtra produtos com volatilidade menor que MAX_VOLATILITY e cria um score para ordenar
+    df_result_chart = (
+        df_result
+        .copy()
+        .assign(profitability = lambda _: _[PROFITABILITY].round(2))
+        .assign(volatility = lambda _: _[VOLATILITY].round(2))
+        .query(f"profitability < {MAX_PROFITABILITY}")
+        .query(f"volatility < {MAX_VOLATILITY}")
+    )
+
+    return df_result_chart
+
+# Cria gráfico interativo
+def chart_interactive(
+    df_result_chart: pd.DataFrame
+):
+    """
+    Função que cria gráfico interativo
+
+    Args:
+        df_result_chart (pd.DataFrame): DataFrame com dados limpos para criar gráficos
+
+    Returns:
+        fig: Gráfico interativo
+    """
+    # Create an interactive scatter plot
+    fig = px.scatter(df_result_chart, x = "volatility", y = "profitability", color = "categoria",
+                    hover_data = ["name", "profitability", "volatility", "categoria"])
+    
+    # Layout do gráfico
+    fig.update_layout(title = f"SuperCarteira: Rentabilidade x Volatilidade (filtrado < {MAX_VOLATILITY})",
+                        xaxis_title = f"Volatilidade_{SCORE_TYPE}",
+                        yaxis_title = f"Rentabilidade_{SCORE_TYPE}",
+                        legend_title = "Categoria")
+
+    return fig
+
 # Encerra este capítulo
 print("03. Funções | OK")
 
@@ -414,6 +475,12 @@ if SWITCH_CHARTS == 1:
 
     # Status da alavanca
     print("    SWITCH_CHARTS ON")
+
+    # # Prepara os dados para criar os gráficos
+    # df_result_chart = clean_to_chart(df_result)
+
+    # # Cria gráfico interativo
+    # fig = chart_interactive(df_result_chart)
 
     # Convert "categoria" column to categorical data type
     df_result["categoria"] = pd.Categorical(df_result["categoria"])
