@@ -1,0 +1,3 @@
+[submodule "submodules/st-frontend-components"]
+	path = submodules/st-frontend-components
+	url = git@github.com:Bain/st-frontend-components.git
