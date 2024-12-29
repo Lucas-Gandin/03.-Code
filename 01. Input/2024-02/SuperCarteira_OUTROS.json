@@ -1,0 +1,114 @@
+{
+  "OUTROS": [
+    {
+      "identifier": "ID_FUNDO_9900000000032362",
+      "label": "01 CD FIC MULTIMERCADO PREVIDENCIÁRIO CRÉDITO PRIVADO",
+      "cnpj": "46.205.770/0001-71",
+      "situation": "Em funcionamento normal",
+      "managementCompany": "EFPC FUNCESP",
+      "isin": "BR0CXKCTF002",
+      "type": null,
+      "stockExchange": null,
+      "assetType": "FI"
+    },
+    {
+      "identifier": "ID_FUNDO_155365",
+      "label": "01 FIC MULTIMERCADO PREVIDENCIÁRIO CRÉDITO PRIVADO",
+      "cnpj": "04.912.456/0001-89",
+      "situation": "Em funcionamento normal",
+      "managementCompany": "EFPC FUNCESP",
+      "isin": "BRMT01CTF003",
+      "type": null,
+      "stockExchange": null,
+      "assetType": "FI"
+    },
+    {
+      "identifier": "ID_FUNDO_154873",
+      "label": "02 FIC MULTIMERCADO PREVIDENCIÁRIO CRÉDITO PRIVADO",
+      "cnpj": "04.912.431/0001-85",
+      "situation": "Em funcionamento normal",
+      "managementCompany": "EFPC FUNCESP",
+      "isin": "BRMT02CTF001",
+      "type": null,
+      "stockExchange": null,
+      "assetType": "FI"
+    },
+    {
+      "identifier": "ID_FUNDO_154911",
+      "label": "03 FIC MULTIMERCADO PREVIDENCIÁRIO CRÉDITO PRIVADO",
+      "cnpj": "05.754.033/0001-40",
+      "situation": "Em funcionamento normal",
+      "managementCompany": "EFPC FUNCESP",
+      "isin": "BRMT03CTF009",
+      "type": null,
+      "stockExchange": null,
+      "assetType": "FI"
+    },
+    {
+      "identifier": "ID_FUNDO_9900000000032296",
+      "label": "04 CRÉDITO FIC MULTIMERCADO PREVIDENCIÁRIO",
+      "cnpj": "46.205.698/0001-82",
+      "situation": "Em funcionamento normal",
+      "managementCompany": "EFPC FUNCESP",
+      "isin": "BR0CWJCTF006",
+      "type": null,
+      "stockExchange": null,
+      "assetType": "FI"
+    },
+    {
+      "identifier": "ID_FUNDO_169773",
+      "label": "04 FIC MULTIMERCADO PREVIDENCIÁRIO CRÉDITO PRIVADO",
+      "cnpj": "04.087.244/0001-04",
+      "situation": "Em funcionamento normal",
+      "managementCompany": "EFPC FUNCESP",
+      "isin": "BRPAUBCTF002",
+      "type": null,
+      "stockExchange": null,
+      "assetType": "FI"
+    },
+    {
+      "identifier": "ID_FUNDO_9900000000010274",
+      "label": "051 ALLOCATION FIC MULTIMERCADO CRÉDITO PRIVADO",
+      "cnpj": "36.016.411/0001-12",
+      "situation": "Em funcionamento normal",
+      "managementCompany": "051 Capital",
+      "isin": "BR0568CTF008",
+      "type": null,
+      "stockExchange": null,
+      "assetType": "FI"
+    },
+    {
+      "identifier": "ID_FUNDO_9900000000010249",
+      "label": "051 ALOCAÇÃO AÇÕES FI AÇÕES",
+      "cnpj": "36.498.260/0001-86",
+      "situation": "Em funcionamento normal",
+      "managementCompany": "051 Capital",
+      "isin": "Não Informado",
+      "type": null,
+      "stockExchange": null,
+      "assetType": "FI"
+    },
+    {
+      "identifier": "ID_FUNDO_9900000000010379",
+      "label": "051 ALOCAÇÃO MODERADO FIC MULTIMERCADO CRÉDITO PRIVADO",
+      "cnpj": "36.498.567/0001-87",
+      "situation": "Em funcionamento normal",
+      "managementCompany": "051 Capital",
+      "isin": "Não Informado",
+      "type": null,
+      "stockExchange": null,
+      "assetType": "FI"
+    },
+    {
+      "identifier": "ID_FUNDO_9900000000028176",
+      "label": "051 ANGÁ CRÉDITO ESTRUTURADO FIC MULTIMERCADO CRÉDITO PRIVADO",
+      "cnpj": "44.613.679/0001-60",
+      "situation": "Em funcionamento normal",
+      "managementCompany": "051 Capital",
+      "isin": "BR0BGWCTF004",
+      "type": null,
+      "stockExchange": null,
+      "assetType": "FI"
+    }
+  ]
+}
