@@ -91,7 +91,7 @@ headers = { 'User-Agent': "insomnia/8.6.1" }
 list_categorias = ["ANTIFRAGILIDADE", "DIVERSIFICACAO", "ESTABILIDADE", "VALORIZACAO", "OUTROS"]
 
 # Tempo de espera entre requisições
-SLEEP_SECONDS = 1
+SLEEP_SECONDS = 2
 
 # Maximo de volatividade permitida no gráfico
 MAX_VOLATILITY = 100

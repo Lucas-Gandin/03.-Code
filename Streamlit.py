@@ -62,11 +62,8 @@ os.chdir(wdir)                                                                  
 Inputs_path  = "/01. Inputs/"
 Results_path = "/02. Results/"
 
-# bst.styles("Streamlit.py")
-
 
 # --------------------------------------------------------------- 02. COCKPIT --------------------------------------------------------------
-
 
 
 
@@ -173,10 +170,8 @@ df_template = pd.read_excel("Template_SuperCarteira_Result.xlsx", engine = "open
 
 # ------------------------------------------------------- 05. COMPONENTES DE FILTROS -------------------------------------------------------
 
-
-
-#########
-# Filtros da Tabela
+# #########
+# # Filtros da Tabela
 st.sidebar.header("Filtros")  
 
 # Define as opções de score que podem ser escolhidas
